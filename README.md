@@ -59,4 +59,15 @@ Instruction: 110 [4][3][2] [1:0]
 - [4]= n, [3] = z, [2] = p, [1:0] is the register that contains the address that you branch to if the branch condition is met
 - Ex: 11000101 -> if last register operation was positive, PC = R1
 
+# Regsiter Table
+
+In my ISA documentation, I said that some bits map to some registers, below are the specific bits to use to access a specific register
+|Register|Bits|
+|--------|----|
+|Zero Reg|00|
+|R1|01|
+|R2|10|
+|R3|11|
+
+
 
