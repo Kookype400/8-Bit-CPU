@@ -38,7 +38,7 @@ Instruction: 010 X [3:2] [1:0]
 Instruction: 011 X [3:2] [1:0]
 - [3:2] refers to both the source register and the destination register, [1:0] refers to the 2nd source register
 - For this instruction, [3:2] CANNOT be 00
-- Ex: 01010110 -> R1 = R1 | R2
+- Ex: 01110110 -> R1 = R1 | R2
 
 ## LD
 
