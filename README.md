@@ -69,5 +69,24 @@ In my ISA documentation, I said that some bits map to some registers, below are 
 |R2|10|
 |R3|11|
 
+# Undefined Behavior
 
+The CPU will (to my knowledge) act unpredictably in the case of using the opcode 111, as I did not program any next state logic or signals using this opcode. Additionally,
+I believe that if [3:2] = 00 in an operation that changes the register value, the CPU will just go back to the fetch state, but it is better to avoid doing this as I did
+not program any explicity behavior in these states.
+
+# Usage Tips
+
+One confusing aspect of the CPU is the Zero Register (Z Reg). It exists in order to give a programmer the ability to use the value 0 in any capacity. It is not a register
+that can be modified, but should rather be used in tandem with other registers as needed. Another thing to know about this CPU is that I do not have a HALT state/Opcode, so
+when programming/simulating with this CPU, you have to be vigilant and see where your program input ends, and stop the simulation yourself when the program reaches that
+endpoint.
+
+## How to program
+
+In order to program this CPU, simply start from the RAM address 00 and use the ISA to help you implement the available operations. Once you have your program in the RAM, make sure that your PC register and State Register are reset to 0. Then, just start your simulation.
+
+## Testing
+
+In order to test this CPU, I made a program that loads the contents of address x40 into R2, and puts the value x02 into the address x41 if R2 is positive or 0, or puts the value x04 into the address x41 if R2 is negative. The test file itself is also uploaded in the repo
 
