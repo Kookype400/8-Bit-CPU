@@ -86,7 +86,7 @@ endpoint.
 
 In order to program this CPU, simply start from the RAM address 00 and use the ISA to help you implement the available operations. Once you have your program in the RAM, make sure that your PC register and State Register are reset to 0. Then, just start your simulation.
 
-## Testing
+# Testing
 
-In order to test this CPU, I made a program that loads the contents of address x40 into R2, and puts the value x02 into the address x41 if R2 is positive or 0, or puts the value x04 into the address x41 if R2 is negative. The test file itself is also uploaded in the repo
+In order to test this CPU, I made a program that loads the contents of address x40 into R2, and puts the value x02 into the address x41 if R2 is positive or 0, or puts the value x04 into the address x41 if R2 is negative. The test file itself is also uploaded in the repository
 
