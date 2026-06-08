@@ -59,7 +59,7 @@ Instruction: 110 [4][3][2] [1:0]
 - [4]= n, [3] = z, [2] = p, [1:0] is the register that contains the address that you branch to if the branch condition is met
 - Ex: 11000101 -> if last register operation was positive, PC = R1
 
-# Regsiter Table
+# Register Table
 
 In my ISA documentation, I said that some bits map to some registers, below are the specific bits to use to access a specific register
 |Register|Bits|
@@ -72,8 +72,7 @@ In my ISA documentation, I said that some bits map to some registers, below are 
 # Undefined Behavior
 
 The CPU will (to my knowledge) act unpredictably in the case of using the opcode 111, as I did not program any next state logic or signals using this opcode. Additionally,
-I believe that if [3:2] = 00 in an operation that changes the register value, the CPU will just go back to the fetch state, but it is better to avoid doing this as I did
-not program any explicity behavior in these states.
+if [3:2] = 00, the CPU will also perform undefined behaviors.
 
 # Usage Tips
 
