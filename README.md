@@ -1,5 +1,5 @@
 # 8-Bit-CPU
-Implementation of a very rudimentary 8 Bit CPU
+Implementation of a very rudimentary 8 Bit CPU, loosely based on the design for LC-3
 
 # Description 
 
